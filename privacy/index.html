@@ -4,21 +4,62 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ForStuff — политика конфиденциальности</title>
+  <link rel="stylesheet" href="../style.css">
+  <script>
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem("forstuff-lang"); } catch (e) {}
+      var nav = (navigator.language || "ru").toLowerCase();
+      document.documentElement.lang = saved || (nav.indexOf("en") === 0 ? "en" : "ru");
+    })();
+  </script>
 </head>
 <body>
-  <h1>Политика конфиденциальности ForStuff</h1>
-  <p>Дата: 25 ноября 2026</p>
-  <p><strong>ForStuff</strong> is a workout log. Training data stays on the device. There is no account server, advertising, or analytics.</p>
-  <p>Приложение ForStuff ведёт дневник тренировок. Почта для связи: <a href="mailto:ma.gaifutdinov@gmail.com">ma.gaifutdinov@gmail.com</a>.</p>
-  <h2>Какие данные есть в приложении</h2>
-  <ul>
-    <li>имя профиля, тренировки, упражнения, замеры тела и настройки;</li>
-    <li>локальные уведомления таймера отдыха и напоминаний;</li>
-    <li>файл резервной копии, который вы создаёте сами через экспорт.</li>
-  </ul>
-  <p>Эти данные хранятся на телефоне. Сервера приложения нет. Файл экспорта уходит с телефона только если вы сами его отправляете. Импорт заменяет локальные данные файлом, который выбрали вы.</p>
-  <h2>Как удалить данные</h2>
-  <p>В приложении откройте аккаунт и выберите сброс данных. Либо удалите приложение — локальные данные удалятся вместе с ним.</p>
-  <p>Вопросы: <a href="mailto:ma.gaifutdinov@gmail.com">ma.gaifutdinov@gmail.com</a>.</p>
+  <div class="wrap">
+    <header class="top">
+      <p class="mark">FORSTUFF</p>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-set-lang="ru">RU</button>
+        <button type="button" data-set-lang="en">EN</button>
+      </div>
+    </header>
+    <main>
+      <article data-copy="ru" data-title="ForStuff — политика конфиденциальности">
+        <h1>Политика конфиденциальности</h1>
+        <p class="date">25 ноября 2026</p>
+        <p>ForStuff ведёт дневник тренировок. Данные остаются на телефоне. Сервера аккаунтов, рекламы и аналитики нет.</p>
+        <p>Почта для связи: <a href="mailto:ma.gaifutdinov@gmail.com">ma.gaifutdinov@gmail.com</a>.</p>
+        <h2>Какие данные есть в приложении</h2>
+        <ul>
+          <li>имя профиля, тренировки, упражнения, замеры тела и настройки;</li>
+          <li>локальные уведомления таймера отдыха и напоминаний;</li>
+          <li>файл резервной копии, который вы создаёте сами через экспорт.</li>
+        </ul>
+        <p>Эти данные хранятся на телефоне. Файл экспорта уходит с телефона только если вы сами его отправляете. Импорт заменяет локальные данные файлом, который выбрали вы.</p>
+        <h2>Как удалить данные</h2>
+        <p>В приложении откройте аккаунт и выберите сброс данных. Либо удалите приложение — локальные данные удалятся вместе с ним.</p>
+      </article>
+      <article data-copy="en" data-title="ForStuff — Privacy Policy">
+        <h1>Privacy Policy</h1>
+        <p class="date">25 November 2026</p>
+        <p>ForStuff is a workout log. Your training data stays on your phone. There is no account server, advertising, or analytics.</p>
+        <p>Contact: <a href="mailto:ma.gaifutdinov@gmail.com">ma.gaifutdinov@gmail.com</a>.</p>
+        <h2>What the app stores</h2>
+        <ul>
+          <li>profile name, workouts, exercises, body measurements, and settings;</li>
+          <li>local notifications for the rest timer and reminders;</li>
+          <li>a backup file you create yourself with Export.</li>
+        </ul>
+        <p>This data stays on the phone. A backup file leaves the phone only if you send it. Import replaces the local data with a file you chose.</p>
+        <h2>How to delete your data</h2>
+        <p>Open Account in the app and choose reset. Or delete the app — local data is removed with it.</p>
+      </article>
+    </main>
+    <footer>
+      <a data-copy="ru" href="../support/">Поддержка</a>
+      <a data-copy="en" href="../support/">Support</a>
+    </footer>
+  </div>
+  <script src="../lang.js"></script>
 </body>
 </html>

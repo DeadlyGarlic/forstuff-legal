@@ -4,11 +4,42 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ForStuff — поддержка</title>
+  <link rel="stylesheet" href="../style.css">
+  <script>
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem("forstuff-lang"); } catch (e) {}
+      var nav = (navigator.language || "ru").toLowerCase();
+      document.documentElement.lang = saved || (nav.indexOf("en") === 0 ? "en" : "ru");
+    })();
+  </script>
 </head>
 <body>
-  <h1>Поддержка ForStuff</h1>
-  <p>ForStuff — дневник тренировок. Данные хранятся на вашем телефоне.</p>
-  <p>Напишите на <a href="mailto:ma.gaifutdinov@gmail.com">ma.gaifutdinov@gmail.com</a>, если приложение ведёт себя не так, как вы ожидали.</p>
-  <p>Политика конфиденциальности: <a href="../privacy/">политика</a>.</p>
+  <div class="wrap">
+    <header class="top">
+      <p class="mark">FORSTUFF</p>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-set-lang="ru">RU</button>
+        <button type="button" data-set-lang="en">EN</button>
+      </div>
+    </header>
+    <main>
+      <article data-copy="ru" data-title="ForStuff — поддержка">
+        <h1>Поддержка</h1>
+        <p>ForStuff — дневник тренировок. Данные хранятся на вашем телефоне.</p>
+        <p>Напишите на <a href="mailto:ma.gaifutdinov@gmail.com">ma.gaifutdinov@gmail.com</a>, если приложение ведёт себя не так, как вы ожидали.</p>
+      </article>
+      <article data-copy="en" data-title="ForStuff — Support">
+        <h1>Support</h1>
+        <p>ForStuff is a workout log. Your data stays on your phone.</p>
+        <p>Email <a href="mailto:ma.gaifutdinov@gmail.com">ma.gaifutdinov@gmail.com</a> if the app does not behave as you expected.</p>
+      </article>
+    </main>
+    <footer>
+      <a data-copy="ru" href="../privacy/">Политика конфиденциальности</a>
+      <a data-copy="en" href="../privacy/">Privacy Policy</a>
+    </footer>
+  </div>
+  <script src="../lang.js"></script>
 </body>
 </html>

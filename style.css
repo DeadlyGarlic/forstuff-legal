@@ -1,0 +1,133 @@
+:root {
+  color-scheme: dark;
+  --bg: #0f0f0f;
+  --card: #1a1a1d;
+  --text: #ffffff;
+  --muted: #929295;
+  --line: #2a2a2d;
+  --accent: #f3c567;
+  --accent-ink: #0f0f0f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+.wrap {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 28px 20px 64px;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.mark {
+  margin: 0;
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.lang {
+  display: flex;
+  gap: 8px;
+}
+
+.lang button {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--muted);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+.lang button.is-on {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+}
+
+main {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 28px 24px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  line-height: 1.25;
+  margin: 0 0 8px;
+  font-weight: 700;
+}
+
+.date,
+.lead {
+  color: var(--muted);
+}
+
+.date {
+  margin: 0 0 20px;
+}
+
+h2 {
+  font-size: 1.05rem;
+  margin: 28px 0 8px;
+}
+
+p {
+  margin: 0 0 12px;
+}
+
+ul {
+  margin: 0 0 12px;
+  padding-left: 1.2rem;
+}
+
+li {
+  margin: 6px 0;
+}
+
+a {
+  color: var(--accent);
+}
+
+footer {
+  margin-top: 20px;
+}
+
+footer a {
+  color: var(--muted);
+}
+
+html[lang="ru"] [data-copy="en"],
+html[lang="en"] [data-copy="ru"] {
+  display: none;
+}
